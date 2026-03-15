@@ -57,6 +57,17 @@ newList = [ expression(element) for element in oldList if condition ]
 li = [num for num in range(20) if num % 2 == 0]
 print(li)
 [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+
+a = [1, 2, 3, 4]
+b = [2, 3, 4, 5]
+
+products = [i * j for i in a for j in b if i % 2 == 0 and j % 2 == 0]
+print(products)
+Run Code
+
+Output:
+[4, 8, 8, 16]
 ```
 
 
