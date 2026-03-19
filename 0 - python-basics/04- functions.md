@@ -118,7 +118,36 @@ print("Zipped lists:", list(zip(['a', 'b'], [1, 2])))
 [('a', 1), ('b', 2)]
 ```
 
+### args Vs kwargs
 
+#### Arbitrary Positional Arguments (*args)
+We use *args to pass multiple values into one parameter. This allows a Python function to accept any number of positional arguments.
+
+```python
+def total_marks(*marks):
+    print("All Marks:", marks)
+    print("Total:", sum(marks))
+
+total_marks(85, 90, 78, 92)
+
+All Marks: (85, 90, 78, 92)
+Total: 345
+```
+
+#### Arbitrary Keyword Arguments (**kwargs)
+We use **kwargs when we want to pass a variable number of named (keyword) arguments to a function. It stores them as a dictionary.
+
+```python
+def student_details(**info):
+    for key, value in info.items():
+        print(f"{key}: {value}")
+
+student_details(name="Aman", age=21, course="AI")
+
+name: Aman
+age: 21
+course: AI
+```
 
 
 
